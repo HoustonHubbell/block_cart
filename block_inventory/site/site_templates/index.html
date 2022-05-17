@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat, msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{msg}}
+                        <button type="button" class="close" data-dismiss = "alert" onclick="this.parentElement.style.display='none'">&times;</button>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div class="container">
+    <!-- Header Section -->
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Investing in the Future of Tomorrow, Today </h2>
+            <h5>Create a Cryptocurrency API from Data on Thousands of Exchanges </h5>
+            <div>
+                <button class="btn">View Our Docs</button>
+                <button class="btn btn-primary">Join The Discord</button>
+            </div>
+        </div>
+        <!-- Header Image -->
+        <div class="col-12 col-md-6">
+            <img class="header-image" src="../../static/images/undraw_Bitcoin_P2P_re_1xqa.png" alt="Hero Header Image" >
+        </div>
+    </header>
+        <!-- End of Header Section -->
+
+        <!-- Star of Middle Section -->
+        <section class="row">
+            <div class="col-12" id="middle-text">
+                <h2>Share and Collect NFT's</h2>
+                <p>You can harness the power of an API to expand your collection</p>
+            </div>
+        </section>
+        <!-- End of Middle Section -->
+
+        <!-- Collection of Features Seciotn -->
+        <section class="row" id="features-section">
+            <div class="col-12 col-md-4">
+              <img src="../../static/images/undraw_Lost_online_re_upmy.png" alt="API Image" id="api-image"> 
+              <h4>Dedicated API Routes</h4>
+              <p>
+                  If you are a fan of using traditional API routes, we have those for you!
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+            <img src="../../static/images/undraw_Outer_space_re_u9vd.png" alt="graphql-image" id="graphql-image">
+            <h4>GraphQL API Route</h4>
+            <p>
+                If you want ALL data from one endpoint, we have that too!
+            </p>
+           </div>
+
+            <div class="col-12 col-md-4">
+               <img src="../../static/images/undraw_World_re_768g.png" alt="database image" id="database-image">
+               <h4>Backed by a PostgreSQL Database</h4>
+               <p>
+                   All data will be persisted inside of a secure Postgres Database
+               </p>
+            </div>
+        </section>
+        <!-- End of Collection of Features -->
+
+        <!-- Start of Community Section -->
+        <section class="row">
+            <div class="col-12 col-md-6">
+                <img src="../../static/images/undraw_Having_fun_re_vj4h.png" alt="Drone Image" id="Drone-image">               
+            </div>
+            <div class="col-12 col-md-6">
+                <h4>Talk with a large community of investors and collectors</h4>
+                <p>
+                    Talk with other devs around the world and collab 
+                    on projects with your data. Join our slack channel and 
+                    give a start to the project on Github!
+                </p>
+                <div>
+                    <button class="btn btn-primary">View on Github</button>
+                    <button class="btn btn-primary">Join our Slack Channel</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- End of Community Section -->
+
+        <!-- Start of Footer -->
+        <footer class="row" id="footer">
+            <div class="col-2 col-md-2">
+               <img src="../../static/images/undraw_Bitcoin_P2P_re_1xqa.png" alt="Coding Drones Logo" id="footer-logo"> 
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="footer-text-flex">
+                    <h4>Platform</h4>
+                    <p>Why Cryptocurrency?</p>
+                    <p>The Crypto Cats Project</p>
+                    <p>Donate</p>
+                    <p>Spread the word</p>
+                    <p>Our Process</p>
+                </div>
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="footer-text-flex">
+                    <h4>Platform</h4>
+                    <p>Why Cryptocurrency?</p>
+                    <p>The Crypto Cats Project</p>
+                    <p>Donate</p>
+                    <p>Spread the word</p>
+                    <p>Our Process</p>
+                </div>
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="footer-text-flex">
+                    <h4>Platform</h4>
+                    <p>Why Cryptocurrency?</p>
+                    <p>The Crypto Cats Project</p>
+                    <p>Donate</p>
+                    <p>Spread the word</p>
+                    <p>Our Process</p>
+                </div>
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="footer-text-flex">
+                    <h4>Platform</h4>
+                    <p>Why Cryptocurrency?</p>
+                    <p>The Crypto Cats Project</p>
+                    <p>Donate</p>
+                    <p>Spread the word</p>
+                    <p>Our Process</p>
+                </div>
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="footer-text-flex">
+                    <h4>Platform</h4>
+                    <p>Why Cryptocurrency?</p>
+                    <p>The Crypto Cats Project</p>
+                    <p>Donate</p>
+                    <p>Spread the word</p>
+                    <p>Our Process</p>
+                </div>
+            </div>
+            </div>
+
+        
+        </footer>
+
+    
+</div>
+
+{% endblock content %}

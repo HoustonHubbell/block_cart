@@ -1,0 +1,1 @@
+web: gunicorn block_inventory:app --preload
