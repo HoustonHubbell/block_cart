@@ -1,14 +1,18 @@
+#main-stuff{
+}
+
 /* Nav Styles */
 .container{
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
 }
 
 
 .ct-nav{
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: rgb(17, 244, 10);
 }
 
 /* Target Main Logo Image */
@@ -34,19 +38,17 @@ ul#horizontal-list li, ul#horizontal-list a{
 
 ul#horizontal-list a:nth-last-child(2){
     border: 2px solid black;
-    border-radius: 11px;
     margin-right: .2vw;
 }
 
 ul#horizontal-list a:nth-last-child(1){
     border: 2px solid black;
-    border-radius: 11px;
     margin-right: .2vw;
 }
 /* End of Navbar Styles */
 
 .btn {
-    background-color: aqua;
+    background-color: rgb(17, 244, 10);
     color: black;
     border: 1px solid black;
 }
@@ -57,8 +59,7 @@ ul#horizontal-list a:nth-last-child(1){
 header{
     border-top: 2px solid black;
     border-top-left-radius: 0%;
-    background-color: aqua;
-    border-radius: 150px;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 
@@ -140,8 +141,7 @@ header{
 #footer{
     border-top: 3px solid black;
     margin-top: 20vh;
-    background-color: aqua;
-    border-radius: 150px;
+    background-color: rgb(17, 244, 10);
     color: black;
 }
 
@@ -151,9 +151,11 @@ header{
     background-image: linear-gradient(to right bottom, rgba(30, 115, 172, 0.7), rgba(142, 57, 153, 0.6)), url(../images/undraw_digital_currency_qpak.png);    
     background-size: cover;
     background-position: 50% 50%;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     position: relative
+}
+
+#profile-info{
+    background-color: rgb(17, 244, 10);
 }
 
 
@@ -164,4 +166,15 @@ header{
     left: 20rem;
     top: 10rem;
     color:white
+}
+
+/*Dashboard section */
+#table-info{
+    background-color: rgb(255, 255, 255);
+}
+
+#search-coin{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
 }

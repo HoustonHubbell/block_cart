@@ -11,3 +11,9 @@ def home():
 @login_required
 def profile():
     return render_template('profile.html')
+
+
+@site.route('/dashboard')
+@login_required
+def dashboard():
+    return render_template('dashboard.html')

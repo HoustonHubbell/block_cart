@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="row g-3" id="search-coin">
+    <div class="col-auto">
+      <label class="visually-hidden">Password</label>
+      <input type="" class="form-control" id="inputPassword2" placeholder="Search">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn mb-3">Search Coins</button>
+    </div>
+  </form>
+
+<table class="table" id="table-info">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Ticker</th>
+        <th scope="col">Price</th>
+        <th scope="col">Volume</th>
+        <th scope="col">Market Cap</th>
+        <th scope="col">% Change</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock content %}
