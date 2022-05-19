@@ -14,7 +14,7 @@ def getdata(current_user_token):
 @token_required
 def create_coin(current_user_token):
     name = request.json['name']
-    description = request.json['description']
+    rank = request.json['rank']
     price = request.json['price']
     volume = request.json['volume']
     ticker = request.json['ticker']
@@ -24,7 +24,7 @@ def create_coin(current_user_token):
 
     print(f"BIG TESTER: {current_user_token.token}")
 
-    coin = Coin(name, description, price, volume, ticker, market_cap, percent_change, user_token = user_token)
+    coin = Coin(name, rank, price, volume, ticker, market_cap, percent_change, user_token = user_token)
 
 
     db.session.add(coin)
@@ -59,7 +59,7 @@ def update_coin(current_user_token, id):
     coin = Coin.query.get(id)
 
     coin.name = request.json['name']
-    coin.description = request.json['description']
+    coin.rank = request.json['rank']
     coin.price = request.json['price']
     coin.volume = request.json['volume']
     coin.ticker = request.json['ticker']

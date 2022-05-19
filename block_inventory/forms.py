@@ -10,5 +10,5 @@ class UserLoginForm(FlaskForm):
     submit_button = SubmitField()
 
 class TickerSearch(FlaskForm):
-    ticker_search = StringField(validators = [DataRequired()])
+    ticker_search = StringField('Ticker', validators = [DataRequired()])
     submit_button = SubmitField()

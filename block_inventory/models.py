@@ -64,18 +64,18 @@ class User(db.Model, UserMixin):
 class Coin(db.Model):
     id = db.Column(db.String, primary_key = True)
     name = db.Column(db.String(150))
-    description = db.Column(db.String(200), nullable = True)
-    price = db.Column(db.Numeric(precision=10, scale=2))
-    volume = db.Column(db.Numeric(precision=13, scale=2), nullable = True)
+    rank = db.Column(db.Integer())
+    price = db.Column(db.Numeric(precision=20, scale=2))
+    volume = db.Column(db.Numeric(precision=20, scale=2), nullable = True)
     ticker = db.Column(db.String(100))
-    market_cap = db.Column(db.Numeric(precision=13, scale=2))
+    market_cap = db.Column(db.Numeric(precision=20, scale=2))
     percent_change = db.Column(db.Numeric(precision=10, scale=2))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
-    def __init__(self, name, description, price, volume, ticker, market_cap, percent_change, user_token, id = ''):
+    def __init__(self, name, rank, price, volume, ticker, market_cap, percent_change, user_token, id = ''):
         self.id = self.set_id()
         self.name = name
-        self.description = description
+        self.rank = rank
         self.price = price
         self.volume = volume
         self.ticker = ticker
@@ -93,7 +93,7 @@ class Coin(db.Model):
 
 class CoinSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'name', 'description', 'price', 'volume', 'ticker', 'market_cap', 'percent_change']
+        fields = ['id', 'name', 'rank', 'price', 'volume', 'ticker', 'market_cap', 'percent_change']
 
 coin_schema = CoinSchema()
 coins_schema = CoinSchema(many = True)

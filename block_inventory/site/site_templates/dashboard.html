@@ -12,11 +12,55 @@
     </div>
   </form> -->
 
-  
-  <table class="table" id="table-info">
+
+
+  <main class="container" id="search">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Search Ticker</h2>
+            {% include 'tickerform.html' %}
+        </aside>
+    </div>
+</main>
+
+<div id="table-head">
+  <h2>Your Wallet</h2>
+</div>
+<table class="table" id="wallet-info">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Ticker</th>
+      <th scope="col">Price</th>
+      <th scope="col">Volume</th>
+      <th scope="col">Market Cap</th>
+      <th scope="col">% Change</th>
+      <th scope="col">Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for coin in coins %}
+    <!-- {{ coin.name }}
+    {{ data.0 }} -->
+    <tr>
+      <td>{{ coins.name }}</td>
+      <td>{{ coin.ticker }}</td>
+      <td>$ {{ coin.price }}</td>
+      <td>$ {{ coin.volume }}</td>
+      <td>$ {{ coin.market_cap }}</td>
+      <td>{{ coin.percent_change }}%</td>
+      <td>{{ coin.rank }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+
+<table class="table" id="table-info">
+    <div id="table-head">
+      <h2>Top 10 Today</h2>
+    </div>
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Ticker</th>
         <th scope="col">Price</th>
@@ -31,13 +75,12 @@
       <!-- {{ coin.name }}
       {{ data.0 }} -->
       <tr>
-        <th scope="row">1</th>
         <td>{{ coin.name }}</td>
         <td>{{ coin.symbol }}</td>
-        <td>{{ coin.quote.USD.price }}</td>
-        <td>{{ coin.quote.USD.volume_24h }}</td>
-        <td>{{ coin.quote.USD.market_cap }}</td>
-        <td>{{ coin.quote.USD.percent_change_1h }}</td>
+        <td>$ {{ coin.quote.USD.price }}</td>
+        <td>$ {{ coin.quote.USD.volume_24h }}</td>
+        <td>$ {{ coin.quote.USD.market_cap }}</td>
+        <td>{{ coin.quote.USD.percent_change_1h }}%</td>
         <td>{{ coin.cmc_rank }}</td>
         </tr>
         {% endfor %}
@@ -49,14 +92,7 @@
 
 
 
-    <main class="container" id="sign-in">
-        <div class="row">
-            <aside class="col-12 col-md-6">
-                <h2>Search Ticker</h2>
-                {% include 'tickerform.html' %}
-            </aside>
-        </div>
-    </main>
+    
 
 
   

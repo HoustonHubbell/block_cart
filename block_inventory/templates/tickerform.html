@@ -1,13 +1,13 @@
 <form method = "POST">
     {{ form.hidden_tag() }}
     <div class="form-group">
-        <fieldset id="email-field">
+        <fieldset id="search-field">
             {{form.ticker_search.label}}
             {{form.ticker_search(class="form-control", placeholder="Place Ticker Here")}}
 
         </fieldset>
 
-        {{ form.submit_button(class="btn btn-primary btn-block") }}
+        {{ form.submit_button(class="btn btn-block") }}
     </div>
 
 </form>

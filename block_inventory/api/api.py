@@ -22,7 +22,6 @@ def get_top_5():
 
     response = session.get(url, params=parameters)
     data = json.loads(response.text)
-    print(data['data'])
     return data['data']
 
 def get_top_10():
@@ -43,3 +42,23 @@ def get_top_10():
     response = session.get(url, params=parameters)
     data = json.loads(response.text)
     return data['data']
+
+
+def get_ticker():
+
+  url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+  parameters = {
+    'start':'1',
+    'limit':'200',
+    'convert':'USD'
+  }
+  headers = {
+    'Accepts': 'application/json',
+    'X-CMC_PRO_API_KEY': '99d6ba91-02aa-4c99-b566-7686a05f8eab',
+  }
+  session = Session()
+  session.headers.update(headers)
+
+  response = session.get(url, params=parameters)
+  data = json.loads(response.text)
+  return data['data']

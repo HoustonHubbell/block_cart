@@ -1,5 +1,4 @@
-#main-stuff{
-}
+
 
 /* Nav Styles */
 .container{
@@ -204,14 +203,32 @@ header{
 }
 
 /*Dashboard section */
-#table-info{
-    background-color: rgb(255, 255, 255);
+#wallet-info{
+    margin-bottom: 10%;
 }
 
-#search-coin{
-    display: flex;
-    justify-content: center;
+#table-info{
+    background-color: rgb(255, 255, 255);
     padding-top: 5%;
+}
+#table-head{
+    text-align: center;
+    align-items: center;
+}
+
+#search{
+    justify-content: center;
+    align-items: center;
+    padding-left: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+#search-field{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-items: center;
 }
 
 /* forms*/
