@@ -12,15 +12,18 @@
 .ct-nav{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(17, 244, 10);
+    background-color: rgb(85, 228, 80);
 }
 
 /* Target Main Logo Image */
 
 .ct-nav img {
-    width:25%;
-    max-width: 100%;
+    width:10%;
+    max-width: 50%;
     margin-left: 2vw;
+    border-radius: 150px;
+    border-top: 100px;
+    border-bottom: 100px;
 }
 ul#horizontal-list{
     min-width: 696px;
@@ -28,39 +31,50 @@ ul#horizontal-list{
     padding-top: 20px;
 
 }
-
-ul#horizontal-list li, ul#horizontal-list a{
-    display: inline;
-    text-decoration: none;
-    padding: .5vw;
+#title-{
     color: black;
 }
 
+ul#horizontal-list li, ul#horizontal-list a{
+    display: inline;
+    justify-content: right;
+    text-decoration: none;
+    padding: .5vw;
+    color: rgb(0, 0, 0);
+    align-items: right;
+}
+
 ul#horizontal-list a:nth-last-child(2){
-    border: 2px solid black;
+
+    margin-right: .2vw;
+    align-items: right;
+}
+ul#horizontal-list a:nth-last-child(3){
+
     margin-right: .2vw;
 }
 
 ul#horizontal-list a:nth-last-child(1){
-    border: 2px solid black;
+
     margin-right: .2vw;
 }
 /* End of Navbar Styles */
 
 .btn {
-    background-color: rgb(17, 244, 10);
+    background-color: rgb(85, 228, 80);
     color: black;
-    border: 1px solid black;
+    border-radius: 150px;
 }
 
 
 
 /* Start of Header Section */
 header{
-    border-top: 2px solid black;
     border-top-left-radius: 0%;
     background-color: rgb(255, 255, 255);
     color: black;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
 
 #header-text{
@@ -72,9 +86,16 @@ header{
     max-width: 100%;
     border-radius: 150px;
 }
+
+#docsbtn{
+    margin-top: 5%;
+}
 /* End of our Header Section Styles */
 
 /* Start of our Middle Section */
+#middle{
+    padding-bottom: 10%;
+}
 #middle-text{
     text-align: center;
 }
@@ -82,6 +103,8 @@ header{
 #middle-text h2{
     padding: 1.5vw;
 }
+
+
 
 /* End our Middle Section Styles */
 
@@ -91,16 +114,20 @@ header{
 }
 
 #features-section{
-    margin: 8vw;
+    border-top: 3px solid black;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 #api-image{
+    padding-top: 11%;
     max-width: 100%;
     max-height: 100%;
     border-radius: 150px;
 }
 
 #graphql-image{
+    padding-top: 6%;
     max-width: 100%;
     max-height: 100%;
     border-radius: 150px;
@@ -115,11 +142,14 @@ header{
 /* End of features section */
 
 /* Community Section Styles */
+#comm{
+    border-top: 3px solid black;
+    padding-top: 10%;
+}
 #Drone-image{
     width: 50%;
     max-width: 75%;
     margin-left: 3vw;
-    border-radius: 150px;
 }
 /* End of Community Section */
 
@@ -139,23 +169,28 @@ header{
 }
 
 #footer{
+    padding-top: 5%;
+    justify-content: space-between;
     border-top: 3px solid black;
     margin-top: 20vh;
-    background-color: rgb(17, 244, 10);
+    background-color: rgb(255, 255, 255);
     color: black;
+    text-align: center;
 }
 
 /* Profile Styles */
 .hero-section{
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(30, 115, 172, 0.7), rgba(142, 57, 153, 0.6)), url(../images/undraw_digital_currency_qpak.png);    
+    background-image: url(../images/Check-Mark-clipart-for-free.png);    
     background-size: cover;
     background-position: 50% 50%;
     position: relative
 }
 
 #profile-info{
-    background-color: rgb(17, 244, 10);
+    width: 50%;
+    border: 2px solid black;
+    text-align: center;
 }
 
 
@@ -165,7 +200,7 @@ header{
     padding-top: 20%;
     left: 20rem;
     top: 10rem;
-    color:white
+    color:rgb(0, 0, 0)
 }
 
 /*Dashboard section */
@@ -177,4 +212,28 @@ header{
     display: flex;
     justify-content: center;
     padding-top: 5%;
+}
+
+/* forms*/
+
+#sign-in{
+    justify-content: center;
+    padding-left: 25%;
+    padding-top: 10%;
+    text-align: center;
+}
+#sign-up{
+    justify-content: center;
+    padding-left: 25%;
+    padding-top: 10%;
+    text-align: center;
+}
+
+#email-field{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#pass-field{
+    margin-bottom: 5%;
 }
