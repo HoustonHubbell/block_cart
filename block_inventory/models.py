@@ -65,7 +65,7 @@ class Coin(db.Model):
     id = db.Column(db.String, primary_key = True)
     name = db.Column(db.String(150))
     rank = db.Column(db.Integer())
-    price = db.Column(db.Numeric(precision=20, scale=2))
+    price = db.Column(db.Numeric(precision=20, scale=4))
     volume = db.Column(db.Numeric(precision=20, scale=2), nullable = True)
     ticker = db.Column(db.String(100))
     market_cap = db.Column(db.Numeric(precision=20, scale=2))

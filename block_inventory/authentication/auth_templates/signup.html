@@ -8,6 +8,9 @@
                 <h2>Create Your Account</h2>
                 {% include 'forms.html' %}
             </aside>
+            <a href="{{ url_for('auth.signin')}}" class="signer" id="signinlink">
+                <h7>Already a member? Sign In Here</h7>
+            </a>
         </div>
     </main>
 

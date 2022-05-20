@@ -202,6 +202,8 @@ header{
     color:rgb(0, 0, 0)
 }
 
+
+
 /*Dashboard section */
 #wallet-info{
     margin-bottom: 10%;
@@ -254,3 +256,13 @@ header{
 #pass-field{
     margin-bottom: 5%;
 }
+
+#signuplink{
+    padding-right: 50%;
+    padding-top: 6%;
+}
+#signinlink{
+    padding-right: 50%;
+    padding-top: 6%;
+}
+

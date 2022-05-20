@@ -11,6 +11,7 @@ import math
 
 
 
+
 site = Blueprint('site', __name__, template_folder='site_templates')
 
 @site.route('/')
@@ -39,7 +40,6 @@ def dashboard():
                     name = coin['name']
                     rank = coin['cmc_rank']
                     price = coin['quote']['USD']['price']
-                    price = round(price,2)
                     volume = coin['quote']['USD']['volume_24h']
                     volume = round(volume,2)
                     ticker = coin['symbol']
@@ -65,14 +65,15 @@ def dashboard():
         raise Exception("Please enter a valid Ticker")
 
 
+    coins = Coin.query.all()
 
 
+    return render_template('dashboard.html', form=form, ticker_data=ticker_data, coins=coins, data=data)
 
-    return render_template('dashboard.html', form=form, ticker_data=ticker_data, data=data)
-
-@site.route('/dashboard')
-@login_required
-def coin_list():
-    coins = db.execute("SELECT * FROM public.coin")
-    return render_template('dashboard.html', coins=coins)
+# @site.route('/cointable')
+# @login_required
+# def coin_list():
+#     coins = Coin.query.all()
+#     print(coins)
+#     return render_template('dashboard.html', coins=coins)
 
